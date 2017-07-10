@@ -162,7 +162,7 @@ self.forthTableView.itemsArray = @[
 ## 第五种 自定义的modal 
 -----------------------------------
 
- >这种就比较复杂 ，如果你的数据源比较复杂，只需要将数组指定给itemArray，然后帮你分析将每行的数据对象传给cell，你只需要重写cell的setDataInfo方法即可拿到数据进行渲染，在cell重写tableView:(UITableView *)tableView cellInfo:(id)dataInfo即可继续计算
+ >这种就比较复杂 ，如果你的数据源比较复杂，只需要将数组指定给itemArray，然后帮你分析将每行的数据对象传给cell，你只需要重写cell的setDataInfo方法即可拿到数据进行渲染，在cell重写tableView:(UITableView *)tableView cellInfo:(id)dataInfo即可继续计算行高
  
 
 # CocoaPods
