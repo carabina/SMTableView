@@ -1,6 +1,6 @@
 //
 //  UITableView+simplify.m
-//  JDCore
+//  SMCore
 //
 //  Created by 王金东 on 15/7/28.
 //  Copyright (c) 2015年 王金东. All rights reserved.
@@ -9,7 +9,7 @@
 #import "UITableView+simplify.h"
 #import "UITableViewCell+simplify.h"
 #import <objc/runtime.h>
-#import "JDBaseRefreshManager.h"
+#import "SMRefreshManager.h"
 
 #pragma mark  ----属性
 //indexPath
@@ -33,13 +33,13 @@ static const void *tableViewKeyForModel = &tableViewKeyForModel;
 #pragma clang diagnostic pop
 
 #pragma mark -----------------------------set方法----------------------------------
-- (void)setSimplifyModel:(JDTableViewSimplifyModel *)simplifyModel {
+- (void)setSimplifyModel:(SMTableViewSimplifyModel *)simplifyModel {
     objc_setAssociatedObject(self, tableViewKeyForModel, simplifyModel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (JDTableViewSimplifyModel *)simplifyModel {
-      JDTableViewSimplifyModel *model =  objc_getAssociatedObject(self, tableViewKeyForModel);
+- (SMTableViewSimplifyModel *)simplifyModel {
+      SMTableViewSimplifyModel *model =  objc_getAssociatedObject(self, tableViewKeyForModel);
     if (model == nil) {
-        model = [[JDTableViewSimplifyModel alloc] init];
+        model = [[SMTableViewSimplifyModel alloc] init];
         self.simplifyModel = model;
     }
     return model;
@@ -55,17 +55,17 @@ static const void *tableViewKeyForModel = &tableViewKeyForModel;
      return  [objc_getAssociatedObject(self, tableViewKeyForEnableSimplify) boolValue];
 }
 //委托
-- (void)setJdDelegate:(id<JDTableViewDelegate>)jdDelegate{
-    self.simplifyModel.jdDelegate = jdDelegate;
+- (void)setSmDelegate:(id<SMTableViewDelegate>)smDelegate{
+    self.simplifyModel.smDelegate = smDelegate;
 }
-- (id<JDTableViewDelegate>)jdDelegate {
-    return  self.simplifyModel.jdDelegate;
+- (id<SMTableViewDelegate>)smDelegate {
+    return  self.simplifyModel.smDelegate;
 }
-- (void)setJdDataSource:(id<JDTableViewDataSource>)jdDataSource{
-    self.simplifyModel.jdDataSource = jdDataSource;
+- (void)setSmDataSource:(id<SMTableViewDataSource>)smDataSource{
+    self.simplifyModel.smDataSource = smDataSource;
 }
-- (id<JDTableViewDataSource>)jdDataSource {
-    return  self.simplifyModel.jdDataSource;
+- (id<SMTableViewDataSource>)smDataSource {
+    return  self.simplifyModel.smDataSource;
 }
 - (void)setDidSelectCellBlock:(DidSelectCellBlock)didSelectCellBlock {
     self.simplifyModel.didSelectCellBlock = didSelectCellBlock;
@@ -245,14 +245,14 @@ static const void *tableViewKeyForModel = &tableViewKeyForModel;
 #pragma mark 刷新功能
 @implementation UITableView (refreshable)
 
-- (void)setRefreshDelegate:(id<JDBaseTableViewRefreshDelegate>)refreshDelegate{
+- (void)setRefreshDelegate:(id<SMTableViewRefreshDelegate>)refreshDelegate{
     objc_setAssociatedObject(self, tableViewKeyForRefreshDelegate, refreshDelegate, OBJC_ASSOCIATION_ASSIGN);
     self.refreshFooterable = self.refreshFooterable;
     self.refreshHeaderable = self.refreshHeaderable;
 }
 
-- (id<JDBaseTableViewRefreshDelegate>)refreshDelegate{
-    id<JDBaseTableViewRefreshDelegate> delegate = objc_getAssociatedObject(self, tableViewKeyForRefreshDelegate);
+- (id<SMTableViewRefreshDelegate>)refreshDelegate{
+    id<SMTableViewRefreshDelegate> delegate = objc_getAssociatedObject(self, tableViewKeyForRefreshDelegate);
     if (delegate == nil) {
         return self;
     }
@@ -264,9 +264,9 @@ static const void *tableViewKeyForModel = &tableViewKeyForModel;
     objc_setAssociatedObject(self, tableViewKeyForHeaderRefresh, @(refreshHeaderable), OBJC_ASSOCIATION_ASSIGN);
     if(refreshHeaderable){
         // 下拉刷新
-        [[JDBaseRefreshManager shareInstance] scrollView:self addHeaderWithTarget:self.refreshDelegate action:@selector(headerRereshing)];
+        [[SMRefreshManager shareInstance] scrollView:self addHeaderWithTarget:self.refreshDelegate action:@selector(headerRereshing)];
     }else{
-        [[JDBaseRefreshManager shareInstance] removeHeaderFromScrollView:self];
+        [[SMRefreshManager shareInstance] removeHeaderFromScrollView:self];
     }
 }
 - (BOOL)refreshHeaderable{
@@ -280,32 +280,32 @@ static const void *tableViewKeyForModel = &tableViewKeyForModel;
      objc_setAssociatedObject(self, tableViewKeyForFooterRefresh, @(refreshFooterable), OBJC_ASSOCIATION_ASSIGN);
     if(refreshFooterable){
         // 上拉加载更多
-        [[JDBaseRefreshManager shareInstance] scrollView:self addFooterWithTarget:self.refreshDelegate action:@selector(footerRereshing)];
+        [[SMRefreshManager shareInstance] scrollView:self addFooterWithTarget:self.refreshDelegate action:@selector(footerRereshing)];
     }else{
-        [[JDBaseRefreshManager shareInstance] removeFooterFromScrollView:self];
+        [[SMRefreshManager shareInstance] removeFooterFromScrollView:self];
     }
 }
 /**
  **开始刷新数据
  **/
 - (void)headerRereshing{
-    [self didLoaded:JDBaseRefreshTableViewHeader];
+    [self didLoaded:SMRefreshTableViewHeader];
 }
 
 /**
  **开始加载数据
  **/
 - (void)footerRereshing{
-    [self didLoaded:JDBaseRefreshTableViewFooter];
+    [self didLoaded:SMRefreshTableViewFooter];
 }
 //加载完调用 子类调用
-- (void)didLoaded:(JDBaseRefreshTableViewType)type{
-    if(type == JDBaseRefreshTableViewHeader){
+- (void)didLoaded:(SMRefreshTableViewType)type{
+    if(type == SMRefreshTableViewHeader){
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [[JDBaseRefreshManager shareInstance] headerEndRefreshingFromScrollView:self];
+        [[SMRefreshManager shareInstance] headerEndRefreshingFromScrollView:self];
     }else{
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [[JDBaseRefreshManager shareInstance] footerEndRefreshingFromScrollView:self];
+        [[SMRefreshManager shareInstance] footerEndRefreshingFromScrollView:self];
     }
 }
 

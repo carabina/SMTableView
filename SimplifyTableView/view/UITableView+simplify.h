@@ -1,6 +1,6 @@
 //
 //  UITableView+simplify.h
-//  JDCore
+//  SMCore
 //
 //  Created by 王金东 on 15/7/28.
 //  Copyright (c) 2015年 王金东. All rights reserved.
@@ -9,17 +9,17 @@
 // 1)、数据源使用
 // 1、先给self.itemsArray赋值 （如果你不想定制cell，想用系统的cell，那么不用再看2、3、4步骤）
 // 2、设置tableViewCellClass，设置cell类
-// 3、建立cell类，需要继承JDBaseTableViewCell
-// 4、重写JDBaseTableViewCell的dataInfo的set方法 ，传递过去的数据源可以用于渲染视图
+// 3、建立cell类，需要继承SMBaseTableViewCell
+// 4、重写SMTableViewCell的dataInfo的set方法 ，传递过去的数据源可以用于渲染视图
 // 5、也可自己实现其他delegate事件，比如点击行
 
 // 以上是基本使用步骤
 
 // 设置多种cell步骤
 // 1、先给self.itemsArray赋值
-// 2、建立cell类，需要继承JDBaseTableViewCell
+// 2、建立cell类，需要继承SMBaseTableViewCell
 // 3、设置self.tableViewCellArray 数组可以是Class 也可以是UInib类
-// 4、重写 - (NSInteger)tableView:(JDBaseTableView *)tableView typeForRowAtIndexPath:(NSIndexPath *)indexPath; 返回值是self.tableViewCellArray的索引
+// 4、重写 - (NSInteger)tableView:(SMTableView *)tableView typeForRowAtIndexPath:(NSIndexPath *)indexPath; 返回值是self.tableViewCellArray的索引
 //
 
 // 通过设置self.sectionIndexTitles 可定制右侧索引
@@ -32,11 +32,11 @@
 // 注意如果是数组里面不是NSArray类（比如是NSDictionary ，则我们将NSDictionary中的items字段取出来作为第二级数据）这个key也可以自定义 参看keyOfItemArray的注释
 
 //2)、 下拉刷新\上拉加载
-// 开启下拉刷新 参照<JDBaseTableViewRefreshDelegate> 协议
+// 开启下拉刷新 参照<SMTableViewRefreshDelegate> 协议
 // self.refreshHeaderable = YES; 实现headerRereshing即可
 // 开启上拉加载
 // self.refreshFooterable = YES; 实现footerRereshing即可
-// 刷新完调用  [super didLoaded:JDBaseRefreshTableViewHeader];
+// 刷新完调用  [super didLoaded:SMRefreshTableViewHeader];
 //
 
 // 3)、查询功能
@@ -51,24 +51,24 @@
 
 
 #import <UIKit/UIKit.h>
-#import "JDTableViewDataSource.h"
-#import "JDTableViewDelegate.h"
-#import "JDTableViewSimplifyModel.h"
+#import "SMTableViewDataSource.h"
+#import "SMTableViewDelegate.h"
+#import "SMTableViewSimplifyModel.h"
 
-extern NSString *const JDTableViewKeyTypeForRow;
-extern NSString *const JDTableViewLayoutForRow;
+extern NSString *const SMTableViewKeyTypeForRow;
+extern NSString *const SMTableViewLayoutForRow;
 
 @interface UITableView (simplify)
 
 @property (nonatomic, assign) BOOL enableSimplify;
 
-@property (nonatomic, strong,readonly) JDTableViewSimplifyModel *simplifyModel;
+@property (nonatomic, strong,readonly) SMTableViewSimplifyModel *simplifyModel;
 
 /**
  *@brief 取消系统默认的delegate和datasource 用下面的来实现自定义
  **/
-@property (nonatomic, weak) id<JDTableViewDelegate> jdDelegate;
-@property (nonatomic, weak) id<JDTableViewDataSource> jdDataSource;
+@property (nonatomic, weak) id<SMTableViewDelegate> smDelegate;
+@property (nonatomic, weak) id<SMTableViewDataSource> smDataSource;
 
 /**
  * 通过block对tableview进行配置
@@ -167,7 +167,7 @@ extern NSString *const JDTableViewLayoutForRow;
 
 
 #pragma mark 刷新协议
-@protocol JDBaseTableViewRefreshDelegate <NSObject>
+@protocol SMTableViewRefreshDelegate <NSObject>
 
 /**
  *@brief 开始刷新数据
@@ -182,9 +182,9 @@ extern NSString *const JDTableViewLayoutForRow;
 @end
 
 
-typedef NS_ENUM(NSInteger, JDBaseRefreshTableViewType) {
-    JDBaseRefreshTableViewHeader,//head类型
-    JDBaseRefreshTableViewFooter,
+typedef NS_ENUM(NSInteger, SMRefreshTableViewType) {
+    SMRefreshTableViewHeader,//head类型
+    SMRefreshTableViewFooter,
 };
 
 
@@ -192,17 +192,17 @@ typedef NS_ENUM(NSInteger, JDBaseRefreshTableViewType) {
  *@brief  是否开启刷新功能 默认开启
  **/
 
-@interface UITableView (refreshable)<JDBaseTableViewRefreshDelegate>
+@interface UITableView (refreshable)<SMTableViewRefreshDelegate>
 
 @property (nonatomic,assign) BOOL refreshHeaderable;
 @property (nonatomic,assign) BOOL refreshFooterable;
 
-@property (nonatomic,weak) id<JDBaseTableViewRefreshDelegate> refreshDelegate;
+@property (nonatomic,weak) id<SMTableViewRefreshDelegate> refreshDelegate;
 
 /**
  *@brief 加载完毕后调用该方法结束加载状态
  **/
-- (void)didLoaded:(JDBaseRefreshTableViewType)type;
+- (void)didLoaded:(SMRefreshTableViewType)type;
 
 @end
 

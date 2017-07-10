@@ -1,6 +1,6 @@
 //
 //  UITableViewCell+simplify.m
-//  JDCore
+//  SMCore
 //
 //  Created by 王金东 on 15/7/28.
 //  Copyright (c) 2015年 王金东. All rights reserved.
@@ -9,24 +9,24 @@
 #import "UITableViewCell+simplify.h"
 #import <objc/runtime.h>
 
-NSString *const JDCellKeyForImageView = @"image";
-NSString *const JDCellKeyForTitleView = @"title";
-NSString *const JDCellKeyForDetailView = @"detail";
-NSString *const JDCellKeyAccessoryType = @"accessoryType";
-NSString *const JDCellKeyAccessoryView = @"accessoryView";
+NSString *const SMCellKeyForImageView = @"image";
+NSString *const SMCellKeyForTitleView = @"title";
+NSString *const SMCellKeyForDetailView = @"detail";
+NSString *const SMCellKeyAccessoryType = @"accessoryType";
+NSString *const SMCellKeyAccessoryView = @"accessoryView";
 
-NSString *const JDCellColorForTitleView = @"titleColor";
-NSString *const JDCellFontForTitleView = @"titleFont";
+NSString *const SMCellColorForTitleView = @"titleColor";
+NSString *const SMCellFontForTitleView = @"titleFont";
 
-NSString *const JDCellColorForDetailView = @"detailColor";
-NSString *const JDCellFontForDetailView = @"detailFont";
+NSString *const SMCellColorForDetailView = @"detailColor";
+NSString *const SMCellFontForDetailView = @"detailFont";
 
 
 
-NSString *const JDCellKeySelectedBlock = @"onSelected";
+NSString *const SMCellKeySelectedBlock = @"onSelected";
 
-CGFloat JDCellDefaultFontForTitleView;
-CGFloat JDCellDefaultFontForDetailView;
+CGFloat SMCellDefaultFontForTitleView;
+CGFloat SMCellDefaultFontForDetailView;
 
 static const void *tableKeyForTitleView = &tableKeyForTitleView;
 static const void *tableKeyForImageView = &tableKeyForImageView;
@@ -41,8 +41,8 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
 
 
 + (void)initialize {
-    JDCellDefaultFontForTitleView = 15;
-    JDCellDefaultFontForDetailView = 14;
+    SMCellDefaultFontForTitleView = 15;
+    SMCellDefaultFontForDetailView = 14;
 }
 
 
@@ -53,7 +53,7 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
 - (NSString *)keyForTitleView {
     NSString *title =   objc_getAssociatedObject(self, tableKeyForTitleView);
     if (title == nil) {
-        return JDCellKeyForTitleView;
+        return SMCellKeyForTitleView;
     }
     return title;
 }
@@ -64,7 +64,7 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
 - (NSString *)keyForImageView {
     NSString *image = objc_getAssociatedObject(self, tableKeyForImageView);
     if (image == nil) {
-        return JDCellKeyForImageView;
+        return SMCellKeyForImageView;
     }
     return image;
 }
@@ -75,7 +75,7 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
 - (NSString *)keyForDetailView {
     NSString *detail = objc_getAssociatedObject(self, tableKeyForDetailView);
     if (detail == nil) {
-        return JDCellKeyForDetailView;
+        return SMCellKeyForDetailView;
     }
     return detail;
 }
@@ -125,7 +125,7 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
         //渲染数据源
         if([dataInfo isKindOfClass:[NSString class]]){
             self.textLabel.text = dataInfo;
-            self.textLabel.font = [UIFont systemFontOfSize:JDCellDefaultFontForTitleView];
+            self.textLabel.font = [UIFont systemFontOfSize:SMCellDefaultFontForTitleView];
         }else if([dataInfo isKindOfClass:[NSDictionary class]]){
             NSDictionary *dic = dataInfo;
             id image = dic[self.keyForImageView];
@@ -149,32 +149,32 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
                 self.detailTextLabel.text = nil;
             }
             //样式设置
-            UIColor *titleColor = dic[JDCellColorForTitleView];
-            UIFont *titleFont = dic[JDCellFontForTitleView];
+            UIColor *titleColor = dic[SMCellColorForTitleView];
+            UIFont *titleFont = dic[SMCellFontForTitleView];
             if(titleColor != nil){
                 self.textLabel.textColor = titleColor;
             }
             if(titleFont != nil){
                 self.textLabel.font = titleFont;
             }else{
-                self.textLabel.font = [UIFont systemFontOfSize:JDCellDefaultFontForTitleView];
+                self.textLabel.font = [UIFont systemFontOfSize:SMCellDefaultFontForTitleView];
             }
             
-            UIColor *detailColor = dic[JDCellColorForDetailView];
-            UIFont *detailfont = dic[JDCellFontForDetailView];
+            UIColor *detailColor = dic[SMCellColorForDetailView];
+            UIFont *detailfont = dic[SMCellFontForDetailView];
             if(detailColor != nil){
                 self.detailTextLabel.textColor = detailColor;
             }
             if(detailfont != nil){
                 self.detailTextLabel.font = detailfont;
             }else{
-                self.detailTextLabel.font = [UIFont systemFontOfSize:JDCellDefaultFontForDetailView];
+                self.detailTextLabel.font = [UIFont systemFontOfSize:SMCellDefaultFontForDetailView];
             }
-            NSInteger type = [dataInfo[JDCellKeyAccessoryType] integerValue];
+            NSInteger type = [dataInfo[SMCellKeyAccessoryType] integerValue];
             if (type > 0) {
                 self.accessoryType = type;
             }
-            UIView *view = dataInfo[JDCellKeyAccessoryView];
+            UIView *view = dataInfo[SMCellKeyAccessoryView];
             self.accessoryView = view;
         }else if([dataInfo isKindOfClass:[NSArray class]]){
             //TODO 暂不处理
@@ -199,8 +199,8 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
             }else{
                 self.detailTextLabel.text = nil;
             }
-            self.textLabel.font = [UIFont systemFontOfSize:JDCellDefaultFontForTitleView];
-            self.detailTextLabel.font = [UIFont systemFontOfSize:JDCellDefaultFontForDetailView];
+            self.textLabel.font = [UIFont systemFontOfSize:SMCellDefaultFontForTitleView];
+            self.detailTextLabel.font = [UIFont systemFontOfSize:SMCellDefaultFontForDetailView];
         }
     }
 }
@@ -215,10 +215,10 @@ static const void *tableKeyForDataInfo = &tableKeyForDataInfo;
 
 + (instancetype)title:(NSString *)title imageName:(NSString *)imageName detail:(NSString *)detail selected:(OnSelectedRowBlock)block{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setValue:title forKey:JDCellKeyForTitleView];
-    [dic setValue:imageName forKey:JDCellKeyForImageView];
-    [dic setValue:detail forKey:JDCellKeyForDetailView];
-    [dic setValue:block forKey:JDCellKeySelectedBlock];
+    [dic setValue:title forKey:SMCellKeyForTitleView];
+    [dic setValue:imageName forKey:SMCellKeyForImageView];
+    [dic setValue:detail forKey:SMCellKeyForDetailView];
+    [dic setValue:block forKey:SMCellKeySelectedBlock];
     return dic;
 }
 

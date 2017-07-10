@@ -8,14 +8,14 @@
 
 #import "ViewController.h"
 #import "UITableView+simplify.h"
-#import "JDBaseTableViewCellStyle.h"
+#import "SMBaseTableViewCellStyle.h"
 #import "User.h"
-#import "JDRefreshTableViewController.h"
-#import "JDRefreshCollectionViewController.h"
-#import "JDBaseRefreshManager.h"
-#import "JDRefreshDelegate.h"
+#import "SMRefreshTableViewController.h"
+#import "SMRefreshCollectionViewController.h"
+#import "SMRefreshManager.h"
+#import "SMRefreshDelegate.h"
 
-@interface ViewController ()<JDTableViewDataSource>
+@interface ViewController ()<SMTableViewDataSource>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UITableView *secondTableView;
@@ -44,7 +44,7 @@
     [self.view addSubview:self.forthTableView];
     
     //实现刷新功能  可全局设置
-    [[JDBaseRefreshManager shareInstance] registerRefreshView:[[JDRefreshDelegate alloc] init]];
+    [[SMRefreshManager shareInstance] registerRefreshView:[[SMRefreshDelegate alloc] init]];
     
     __weak UIViewController *weakSelf = self;
     
@@ -56,15 +56,15 @@
     self.secondTableView.itemsArray = @[
                                         @{
                                             @"title" : @"刷新tableView",
-                                            JDCellKeySelectedBlock : ^(NSIndexPath *indexPath){
-                                                [weakSelf.navigationController pushViewController:[[JDRefreshTableViewController alloc] init] animated:YES];
+                                            SMCellKeySelectedBlock : ^(NSIndexPath *indexPath){
+                                                [weakSelf.navigationController pushViewController:[[SMRefreshTableViewController alloc] init] animated:YES];
                                                 NSLog(@"选中第%ld行",indexPath.row);
                                             },
                                             },
                                         @{
                                             @"title" : @"刷新collectionView",
-                                            JDCellKeySelectedBlock : ^(NSIndexPath *indexPath){
-                                                [weakSelf.navigationController pushViewController:[[JDRefreshCollectionViewController alloc] init] animated:YES];
+                                            SMCellKeySelectedBlock : ^(NSIndexPath *indexPath){
+                                                [weakSelf.navigationController pushViewController:[[SMRefreshCollectionViewController alloc] init] animated:YES];
                                                 NSLog(@"选中第%ld行",indexPath.row);
                                             },
                                             },
@@ -81,7 +81,7 @@
     self.thirdTableView.keyOfItemArray = @"items";
     
     self.thirdTableView.sectionable = YES;
-    self.thirdTableView.tableViewCellClass = [JDBaseTableViewCellStyleValue1 class];
+    self.thirdTableView.tableViewCellClass = [SMBaseTableViewCellStyleValue1 class];
     self.thirdTableView.itemsArray = @[
                                        @{
                                            @"title" : @"人",
@@ -130,10 +130,10 @@
     self.forthTableView.keyOfHeadTitle = @"title";
     self.forthTableView.autoLayout = YES;
     self.forthTableView.sectionable = YES;
-    self.forthTableView.jdDataSource = self;
+    self.forthTableView.smDataSource = self;
     self.forthTableView.tableViewCellArray = @[
                                                [UINib nibWithNibName:@"TableViewDemoCell" bundle:nil],
-                                               [JDBaseTableViewCellStyleValue1 class]
+                                               [SMBaseTableViewCellStyleValue1 class]
                                                ];
     self.forthTableView.itemsArray = @[
                                        @{
@@ -149,16 +149,16 @@
                                                    @{
                                                        @"title" : @"美女",
                                                        @"detail" : @"很漂亮",
-                                                       JDCellKeySelectedBlock : ^(NSIndexPath *indexPath){
-                                                           [weakSelf.navigationController pushViewController:[[JDRefreshTableViewController alloc] init] animated:YES];
+                                                       SMCellKeySelectedBlock : ^(NSIndexPath *indexPath){
+                                                           [weakSelf.navigationController pushViewController:[[SMRefreshTableViewController alloc] init] animated:YES];
                                                            NSLog(@"选中第%ld行",indexPath.row);
                                                        },
-                                                       JDTableViewKeyTypeForRow : @(1)//等同于下面的typeForRowAtIndexPath委托方法
+                                                       SMTableViewKeyTypeForRow : @(1)//等同于下面的typeForRowAtIndexPath委托方法
                                                        },
                                                    @{
                                                        @"title" : @"美女",
                                                        @"detail" : @"很漂亮",
-                                                       JDTableViewKeyTypeForRow : @(1)//等同于下面的typeForRowAtIndexPath委托方法
+                                                       SMTableViewKeyTypeForRow : @(1)//等同于下面的typeForRowAtIndexPath委托方法
                                                        }
                                                    ]
                                            },

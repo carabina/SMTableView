@@ -1,6 +1,6 @@
 //
 //  UICollectionViewCell+simplify.h
-//  JDCore
+//  SMCore
 //
 //  Created by 王金东 on 15/12/18.
 //  Copyright © 2015年 王金东. All rights reserved.

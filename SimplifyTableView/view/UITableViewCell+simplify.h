@@ -1,6 +1,6 @@
 //
 //  UITableViewCell+simplify.h
-//  JDCore
+//  SMCore
 //
 //  Created by 王金东 on 15/7/28.
 //  Copyright (c) 2015年 王金东. All rights reserved.
@@ -12,26 +12,26 @@
 /**
  *@brief 3个控件的文本key
  **/
-extern NSString *const JDCellKeyForImageView;
-extern NSString *const JDCellKeyForTitleView;
-extern NSString *const JDCellKeyForDetailView;
-extern NSString *const JDCellKeyAccessoryType;
-extern NSString *const JDCellKeyAccessoryView;
+extern NSString *const SMCellKeyForImageView;
+extern NSString *const SMCellKeyForTitleView;
+extern NSString *const SMCellKeyForDetailView;
+extern NSString *const SMCellKeyAccessoryType;
+extern NSString *const SMCellKeyAccessoryView;
 
 /**
  *@brief 样式设置key
  **/
-extern NSString *const JDCellColorForTitleView;
-extern NSString *const JDCellFontForTitleView;
+extern NSString *const SMCellColorForTitleView;
+extern NSString *const SMCellFontForTitleView;
 
-extern NSString *const JDCellColorForDetailView;
-extern NSString *const JDCellFontForDetailView;
+extern NSString *const SMCellColorForDetailView;
+extern NSString *const SMCellFontForDetailView;
 
-extern CGFloat  JDCellDefaultFontForTitleView;
-extern CGFloat  JDCellDefaultFontForDetailView;
+extern CGFloat  SMCellDefaultFontForTitleView;
+extern CGFloat  SMCellDefaultFontForDetailView;
 
 //用于点击事件
-extern NSString *const JDCellKeySelectedBlock;
+extern NSString *const SMCellKeySelectedBlock;
 
 /**
  *@brief 可以将block放入到cell的数据源中 支持下面3种数据的任意组合

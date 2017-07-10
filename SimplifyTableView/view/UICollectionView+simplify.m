@@ -1,6 +1,6 @@
 //
 //  UICollectionView+simplify.m
-//  JDCore
+//  SNCore
 //
 //  Created by 王金东 on 15/12/18.
 //  Copyright © 2015年 王金东. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UICollectionView+simplify.h"
 #import <objc/runtime.h>
-#import "JDBaseRefreshManager.h"
+#import "SMRefreshManager.h"
 
 #define collectionCellId @"collectionCellId"
 
@@ -42,30 +42,30 @@ static const void *cViewKeyForModel = &cViewKeyForModel;
 - (BOOL)enableSimplify {
     return  [objc_getAssociatedObject(self, cViewKeyForEnableSimplify) boolValue];
 }
-- (void)setSimplifyModel:(JDCollectionViewSimplifyModel *)simplifyModel {
+- (void)setSimplifyModel:(SMCollectionViewSimplifyModel *)simplifyModel {
     objc_setAssociatedObject(self, cViewKeyForModel, simplifyModel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (JDCollectionViewSimplifyModel *)simplifyModel {
-    JDCollectionViewSimplifyModel *model =  objc_getAssociatedObject(self, cViewKeyForModel);
+- (SMCollectionViewSimplifyModel *)simplifyModel {
+    SMCollectionViewSimplifyModel *model =  objc_getAssociatedObject(self, cViewKeyForModel);
     if (model == nil) {
-        model = [[JDCollectionViewSimplifyModel alloc] init];
+        model = [[SMCollectionViewSimplifyModel alloc] init];
         self.simplifyModel = model;
     }
     return model;
 }
 
 //委托
-- (void)setJdDelegate:(id<JDCollectionViewDelegate>)jdDelegate{
-    self.simplifyModel.jdDelegate = jdDelegate;
+- (void)setSmDelegate:(id<SMCollectionViewDelegate>)smDelegate{
+    self.simplifyModel.smDelegate = smDelegate;
 }
-- (id<JDCollectionViewDelegate>)jdDelegate {
-    return  self.simplifyModel.jdDelegate;
+- (id<SMCollectionViewDelegate>)smDelegate {
+    return  self.simplifyModel.smDelegate;
 }
-- (void)setJdDataSource:(id<JDCollectionViewDataSource>)jdDataSource{
-    self.simplifyModel.jdDataSource = jdDataSource;
+- (void)setSmDataSource:(id<SMCollectionViewDataSource>)smDataSource{
+    self.simplifyModel.smDataSource = smDataSource;
 }
-- (id<JDCollectionViewDataSource>)jdDataSource {
-    return  self.simplifyModel.jdDataSource;
+- (id<SMCollectionViewDataSource>)smDataSource {
+    return  self.simplifyModel.smDataSource;
 }
 
 
@@ -123,14 +123,14 @@ static const void *cViewKeyForModel = &cViewKeyForModel;
 #pragma mark 刷新功能
 @implementation UICollectionView (refreshable)
 
-- (void)setRefreshDelegate:(id<JDBaseCollectionViewRefreshDelegate>)refreshDelegate{
+- (void)setRefreshDelegate:(id<SMCollectionViewRefreshDelegate>)refreshDelegate{
     objc_setAssociatedObject(self, cViewKeyForRefreshDelegate, refreshDelegate, OBJC_ASSOCIATION_ASSIGN);
     self.refreshFooterable = self.refreshFooterable;
     self.refreshHeaderable = self.refreshHeaderable;
 }
 
-- (id<JDBaseCollectionViewRefreshDelegate>)refreshDelegate{
-    id<JDBaseCollectionViewRefreshDelegate> delegate = objc_getAssociatedObject(self, cViewKeyForRefreshDelegate);
+- (id<SMCollectionViewRefreshDelegate>)refreshDelegate{
+    id<SMCollectionViewRefreshDelegate> delegate = objc_getAssociatedObject(self, cViewKeyForRefreshDelegate);
     if (delegate == nil) {
         return self;
     }
@@ -143,9 +143,9 @@ static const void *cViewKeyForModel = &cViewKeyForModel;
     if(refreshHeaderable){
         // 下拉刷新
         // 下拉刷新
-        [[JDBaseRefreshManager shareInstance] scrollView:self addHeaderWithTarget:self.refreshDelegate action:@selector(headerRereshing)];
+        [[SMRefreshManager shareInstance] scrollView:self addHeaderWithTarget:self.refreshDelegate action:@selector(headerRereshing)];
     }else{
-        [[JDBaseRefreshManager shareInstance] removeHeaderFromScrollView:self];
+        [[SMRefreshManager shareInstance] removeHeaderFromScrollView:self];
     }
 }
 - (BOOL)refreshHeaderable{
@@ -159,34 +159,34 @@ static const void *cViewKeyForModel = &cViewKeyForModel;
      objc_setAssociatedObject(self, cViewKeyForFooterRefresh, @(refreshFooterable), OBJC_ASSOCIATION_ASSIGN);
     if(refreshFooterable){
         // 上拉加载更多
-        [[JDBaseRefreshManager shareInstance] scrollView:self addFooterWithTarget:self.refreshDelegate action:@selector(footerRereshing)];
+        [[SMRefreshManager shareInstance] scrollView:self addFooterWithTarget:self.refreshDelegate action:@selector(footerRereshing)];
     }else{
-        [[JDBaseRefreshManager shareInstance] removeFooterFromScrollView:self];
+        [[SMRefreshManager shareInstance] removeFooterFromScrollView:self];
     }
 }
 /**
  **开始刷新数据
  **/
 - (void)headerRereshing{
-    [self didLoaded:JDBaseRefreshCollectionViewHeader];
+    [self didLoaded:SMRefreshCollectionViewHeader];
 }
 
 /**
  **开始加载数据
  **/
 - (void)footerRereshing{
-    [self didLoaded:JDBaseRefreshCollectionViewFooter];
+    [self didLoaded:SMRefreshCollectionViewFooter];
 }
 //加载完调用 子类调用
-- (void)didLoaded:(JDBaseRefreshCollectionViewType)type{
+- (void)didLoaded:(SMRefreshCollectionViewType)type{
     // 刷新表格
     [self reloadData];
-    if(type == JDBaseRefreshCollectionViewHeader){
+    if(type == SMRefreshCollectionViewHeader){
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [[JDBaseRefreshManager shareInstance] headerEndRefreshingFromScrollView:self];
+        [[SMRefreshManager shareInstance] headerEndRefreshingFromScrollView:self];
     }else{
         // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
-        [[JDBaseRefreshManager shareInstance] footerEndRefreshingFromScrollView:self];
+        [[SMRefreshManager shareInstance] footerEndRefreshingFromScrollView:self];
     }}
 
 
