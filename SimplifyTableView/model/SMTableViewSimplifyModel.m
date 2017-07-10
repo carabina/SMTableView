@@ -9,7 +9,7 @@
 #import "SMTableViewSimplifyModel.h"
 #import <CTObjectiveCRuntimeAdditions/CTBlockDescription.h>
 #import "UITableViewCell+simplify.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+//#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 #define respondsSel(target,sel)  (target && [target respondsToSelector:sel])
 #define isTableView(tableView) ([tableView isKindOfClass:[UITableView class]])
@@ -291,21 +291,21 @@ NSString *const SMTableViewLayoutForRow = @"layoutForRow";
 //cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.autoLayout) {
-        id dataInfo = [self dataInfoforCellatTableView:tableView IndexPath:indexPath];
-        NSInteger type = [self tableView:tableView typeForRowAtIndexPath:indexPath];
-        if([dataInfo isKindOfClass:[NSDictionary class]] && [dataInfo objectForKey:SMTableViewKeyTypeForRow]){
-            type = [dataInfo[SMTableViewKeyTypeForRow] integerValue];
-        }
-        NSString *cellID = [_cellID stringByAppendingFormat:@"_%ld",(long)type];
-        __weak SMTableViewSimplifyModel *weakSelf = self;
-        return [tableView fd_heightForCellWithIdentifier:cellID cacheByIndexPath:indexPath configuration:^(UITableViewCell *cell) {
-            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
-            cell.indexPath = indexPath;
-            cell.keyForTitleView = weakSelf.keyForTitleView;
-            cell.keyForDetailView = weakSelf.keyForDetailView;
-            cell.keyForImageView = weakSelf.keyForImageView;
-            cell.dataInfo = dataInfo;
-        }];
+//        id dataInfo = [self dataInfoforCellatTableView:tableView IndexPath:indexPath];
+//        NSInteger type = [self tableView:tableView typeForRowAtIndexPath:indexPath];
+//        if([dataInfo isKindOfClass:[NSDictionary class]] && [dataInfo objectForKey:SMTableViewKeyTypeForRow]){
+//            type = [dataInfo[SMTableViewKeyTypeForRow] integerValue];
+//        }
+//        NSString *cellID = [_cellID stringByAppendingFormat:@"_%ld",(long)type];
+//        __weak SMTableViewSimplifyModel *weakSelf = self;
+//        return [tableView fd_heightForCellWithIdentifier:cellID cacheByIndexPath:indexPath configuration:^(UITableViewCell *cell) {
+//            cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+//            cell.indexPath = indexPath;
+//            cell.keyForTitleView = weakSelf.keyForTitleView;
+//            cell.keyForDetailView = weakSelf.keyForDetailView;
+//            cell.keyForImageView = weakSelf.keyForImageView;
+//            cell.dataInfo = dataInfo;
+//        }];
         return  -1.0f;
     }
     //SMLog(@"计算第%d块，第%d行行高",indexPath.section,indexPath.row);
