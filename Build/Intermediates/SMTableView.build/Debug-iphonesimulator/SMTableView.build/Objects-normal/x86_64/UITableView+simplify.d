@@ -6,4 +6,4 @@ dependencies: \
   /Users/wangjindong/Documents/github/SMTableView/SimplifyTableView/model/SMTableViewSimplifyModel.h \
   /Users/wangjindong/Documents/github/SMTableView/SimplifyTableView/view/UITableViewCell+simplify.h \
   /Users/wangjindong/Documents/github/SMTableView/SimplifyTableView/SMRefreshManager.h \
-  /Users/wangjindong/Documents/github/SMTableView/SimplifyTableView/SMScrollViewRefreshDelegate.h
+  /Users/wangjindong/Documents/github/SMTableView/SimplifyTableView/delegate/SMScrollViewRefreshDelegate.h

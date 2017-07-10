@@ -48,7 +48,6 @@
 		4D7956D01F13776900247377 /* SMTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTableViewDelegate.h; sourceTree = "<group>"; };
 		4D7956D11F13776900247377 /* SMRefreshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRefreshManager.h; sourceTree = "<group>"; };
 		4D7956D21F13776900247377 /* SMRefreshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMRefreshManager.m; sourceTree = "<group>"; };
-		4D7956D31F13776900247377 /* SMScrollViewRefreshDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMScrollViewRefreshDelegate.h; sourceTree = "<group>"; };
 		4D7956D51F13776900247377 /* SMCollectionViewSimplifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCollectionViewSimplifyModel.h; sourceTree = "<group>"; };
 		4D7956D61F13776900247377 /* SMCollectionViewSimplifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCollectionViewSimplifyModel.m; sourceTree = "<group>"; };
 		4D7956D71F13776900247377 /* SMTableViewSimplifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTableViewSimplifyModel.h; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		4D7956F91F13799200247377 /* TableViewDemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDemoCell.h; sourceTree = "<group>"; };
 		4D7956FA1F13799200247377 /* TableViewDemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoCell.m; sourceTree = "<group>"; };
 		4D7956FB1F13799200247377 /* TableViewDemoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewDemoCell.xib; sourceTree = "<group>"; };
+		4D7957011F13C5C000247377 /* SMScrollViewRefreshDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMScrollViewRefreshDelegate.h; sourceTree = "<group>"; };
 		7E193B720BB21BCDB0C9BBC0 /* Pods-SMTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.release.xcconfig"; sourceTree = "<group>"; };
 		A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9FD39B96A60297D2CBB967 /* Pods-SMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 				4D7956CC1F13776900247377 /* delegate */,
 				4D7956D11F13776900247377 /* SMRefreshManager.h */,
 				4D7956D21F13776900247377 /* SMRefreshManager.m */,
-				4D7956D31F13776900247377 /* SMScrollViewRefreshDelegate.h */,
 				4D7956D41F13776900247377 /* model */,
 				4D7956D91F13776900247377 /* view */,
 			);
@@ -161,6 +160,7 @@
 		4D7956CC1F13776900247377 /* delegate */ = {
 			isa = PBXGroup;
 			children = (
+				4D7957011F13C5C000247377 /* SMScrollViewRefreshDelegate.h */,
 				4D7956CD1F13776900247377 /* SMCollectionViewDataSource.h */,
 				4D7956CE1F13776900247377 /* SMCollectionViewDelegate.h */,
 				4D7956CF1F13776900247377 /* SMTableViewDataSource.h */,

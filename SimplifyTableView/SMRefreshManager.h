@@ -18,7 +18,7 @@
 - (void)registerRefreshView:(id<SMScrollViewRefreshDelegate>)delegate;
 
 //添加下拉事件
-- (void)scrollView:(UIScrollView *)gitscrollView addHeaderWithTarget:(id)delegate action:(SEL)action;
+- (void)scrollView:(UIScrollView *)scrollView addHeaderWithTarget:(id)delegate action:(SEL)action;
 //添加上拉事件
 - (void)scrollView:(UIScrollView *)scrollView addFooterWithTarget:(id)delegate action:(SEL)action;
 //移除下拉事件 或 视图
