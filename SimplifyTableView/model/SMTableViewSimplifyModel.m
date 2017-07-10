@@ -9,7 +9,7 @@
 #import "SMTableViewSimplifyModel.h"
 #import <CTObjectiveCRuntimeAdditions/CTBlockDescription.h>
 #import "UITableViewCell+simplify.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import "UITableView+FDTemplateLayoutCell.h"
 
 #define respondsSel(target,sel)  (target && [target respondsToSelector:sel])
 #define isTableView(tableView) ([tableView isKindOfClass:[UITableView class]])
