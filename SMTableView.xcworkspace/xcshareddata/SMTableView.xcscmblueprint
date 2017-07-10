@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DAE88064DC5030EFC855EF332F422569DC3C3584",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DAE88064DC5030EFC855EF332F422569DC3C3584" : 9223372036854775807,
+    "A2D58BA415E101D813F30B4F73CD21DDC0F76FFA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E2AE8B07-73A4-4A11-9CE8-C38068E6A27C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DAE88064DC5030EFC855EF332F422569DC3C3584" : "SMTableView\/",
+    "A2D58BA415E101D813F30B4F73CD21DDC0F76FFA" : "tableivewSimplifyDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SMTableView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SMTableView.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wangjindong\/tableivewSimplifyDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A2D58BA415E101D813F30B4F73CD21DDC0F76FFA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wangjindong\/SMTableView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DAE88064DC5030EFC855EF332F422569DC3C3584"
+    }
+  ]
+}

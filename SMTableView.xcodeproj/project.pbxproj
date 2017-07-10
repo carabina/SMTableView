@@ -20,6 +20,14 @@
 		4D7956E61F13776900247377 /* UICollectionViewCell+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956DD1F13776900247377 /* UICollectionViewCell+simplify.m */; };
 		4D7956E71F13776900247377 /* UITableView+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956DF1F13776900247377 /* UITableView+simplify.m */; };
 		4D7956E81F13776900247377 /* UITableViewCell+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956E11F13776900247377 /* UITableViewCell+simplify.m */; };
+		4D7956EF1F13797300247377 /* JDRefreshCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956EA1F13797300247377 /* JDRefreshCollectionViewController.m */; };
+		4D7956F01F13797300247377 /* JDRefreshDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956EC1F13797300247377 /* JDRefreshDelegate.m */; };
+		4D7956F11F13797300247377 /* JDRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956EE1F13797300247377 /* JDRefreshTableViewController.m */; };
+		4D7956F41F13797E00247377 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956F31F13797E00247377 /* User.m */; };
+		4D7956FD1F13799200247377 /* JDBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956F61F13799200247377 /* JDBaseCollectionViewCell.m */; };
+		4D7956FE1F13799200247377 /* JDBaseTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956F81F13799200247377 /* JDBaseTableViewCellStyle.m */; };
+		4D7956FF1F13799200247377 /* TableViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956FA1F13799200247377 /* TableViewDemoCell.m */; };
+		4D7957001F13799200247377 /* TableViewDemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7956FB1F13799200247377 /* TableViewDemoCell.xib */; };
 		C405938C4ABC6210A433616F /* libPods-SMTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +61,21 @@
 		4D7956DF1F13776900247377 /* UITableView+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+simplify.m"; sourceTree = "<group>"; };
 		4D7956E01F13776900247377 /* UITableViewCell+simplify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+simplify.h"; sourceTree = "<group>"; };
 		4D7956E11F13776900247377 /* UITableViewCell+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+simplify.m"; sourceTree = "<group>"; };
+		4D7956E91F13797300247377 /* JDRefreshCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDRefreshCollectionViewController.h; sourceTree = "<group>"; };
+		4D7956EA1F13797300247377 /* JDRefreshCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDRefreshCollectionViewController.m; sourceTree = "<group>"; };
+		4D7956EB1F13797300247377 /* JDRefreshDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDRefreshDelegate.h; sourceTree = "<group>"; };
+		4D7956EC1F13797300247377 /* JDRefreshDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDRefreshDelegate.m; sourceTree = "<group>"; };
+		4D7956ED1F13797300247377 /* JDRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDRefreshTableViewController.h; sourceTree = "<group>"; };
+		4D7956EE1F13797300247377 /* JDRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDRefreshTableViewController.m; sourceTree = "<group>"; };
+		4D7956F21F13797E00247377 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		4D7956F31F13797E00247377 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		4D7956F51F13799200247377 /* JDBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		4D7956F61F13799200247377 /* JDBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		4D7956F71F13799200247377 /* JDBaseTableViewCellStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBaseTableViewCellStyle.h; sourceTree = "<group>"; };
+		4D7956F81F13799200247377 /* JDBaseTableViewCellStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBaseTableViewCellStyle.m; sourceTree = "<group>"; };
+		4D7956F91F13799200247377 /* TableViewDemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDemoCell.h; sourceTree = "<group>"; };
+		4D7956FA1F13799200247377 /* TableViewDemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoCell.m; sourceTree = "<group>"; };
+		4D7956FB1F13799200247377 /* TableViewDemoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewDemoCell.xib; sourceTree = "<group>"; };
 		7E193B720BB21BCDB0C9BBC0 /* Pods-SMTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.release.xcconfig"; sourceTree = "<group>"; };
 		A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9FD39B96A60297D2CBB967 /* Pods-SMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +115,15 @@
 		4D7956B31F13774700247377 /* SMTableView */ = {
 			isa = PBXGroup;
 			children = (
+				4D7956FC1F13799200247377 /* DefaultCell */,
+				4D7956F21F13797E00247377 /* User.h */,
+				4D7956F31F13797E00247377 /* User.m */,
+				4D7956E91F13797300247377 /* JDRefreshCollectionViewController.h */,
+				4D7956EA1F13797300247377 /* JDRefreshCollectionViewController.m */,
+				4D7956EB1F13797300247377 /* JDRefreshDelegate.h */,
+				4D7956EC1F13797300247377 /* JDRefreshDelegate.m */,
+				4D7956ED1F13797300247377 /* JDRefreshTableViewController.h */,
+				4D7956EE1F13797300247377 /* JDRefreshTableViewController.m */,
 				4D7956B71F13774700247377 /* AppDelegate.h */,
 				4D7956B81F13774700247377 /* AppDelegate.m */,
 				4D7956BA1F13774700247377 /* ViewController.h */,
@@ -161,6 +193,21 @@
 				4D7956E11F13776900247377 /* UITableViewCell+simplify.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		4D7956FC1F13799200247377 /* DefaultCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956F51F13799200247377 /* JDBaseCollectionViewCell.h */,
+				4D7956F61F13799200247377 /* JDBaseCollectionViewCell.m */,
+				4D7956F71F13799200247377 /* JDBaseTableViewCellStyle.h */,
+				4D7956F81F13799200247377 /* JDBaseTableViewCellStyle.m */,
+				4D7956F91F13799200247377 /* TableViewDemoCell.h */,
+				4D7956FA1F13799200247377 /* TableViewDemoCell.m */,
+				4D7956FB1F13799200247377 /* TableViewDemoCell.xib */,
+			);
+			name = DefaultCell;
+			path = ../../tableivewSimplifyDemo/SMTableViewDemo/DefaultCell;
 			sourceTree = "<group>";
 		};
 		69C397B78DA572937F0E2A7E /* Frameworks */ = {
@@ -243,6 +290,7 @@
 			files = (
 				4D7956C41F13774700247377 /* LaunchScreen.storyboard in Resources */,
 				4D7956C11F13774700247377 /* Assets.xcassets in Resources */,
+				4D7957001F13799200247377 /* TableViewDemoCell.xib in Resources */,
 				4D7956BF1F13774700247377 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,16 +350,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7956EF1F13797300247377 /* JDRefreshCollectionViewController.m in Sources */,
 				4D7956E41F13776900247377 /* JDTableViewSimplifyModel.m in Sources */,
+				4D7956FE1F13799200247377 /* JDBaseTableViewCellStyle.m in Sources */,
 				4D7956E21F13776900247377 /* JDBaseRefreshManager.m in Sources */,
 				4D7956E51F13776900247377 /* UICollectionView+simplify.m in Sources */,
+				4D7956FF1F13799200247377 /* TableViewDemoCell.m in Sources */,
 				4D7956E71F13776900247377 /* UITableView+simplify.m in Sources */,
 				4D7956BC1F13774700247377 /* ViewController.m in Sources */,
+				4D7956F01F13797300247377 /* JDRefreshDelegate.m in Sources */,
 				4D7956B91F13774700247377 /* AppDelegate.m in Sources */,
+				4D7956F41F13797E00247377 /* User.m in Sources */,
 				4D7956E81F13776900247377 /* UITableViewCell+simplify.m in Sources */,
 				4D7956E31F13776900247377 /* JDCollectionViewSimplifyModel.m in Sources */,
 				4D7956B61F13774700247377 /* main.m in Sources */,
+				4D7956FD1F13799200247377 /* JDBaseCollectionViewCell.m in Sources */,
 				4D7956E61F13776900247377 /* UICollectionViewCell+simplify.m in Sources */,
+				4D7956F11F13797300247377 /* JDRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +527,7 @@
 				4D7956CA1F13774700247377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
