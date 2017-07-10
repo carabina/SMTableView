@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SMTableView"
-  s.version      = "2.1.5"
+  s.version      = "2.1.6"
   s.summary      = "one line of tableview"
 
   s.description  = <<-DESC
