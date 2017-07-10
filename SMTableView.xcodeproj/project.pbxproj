@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D7956B61F13774700247377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956B51F13774700247377 /* main.m */; };
+		4D7956B91F13774700247377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956B81F13774700247377 /* AppDelegate.m */; };
+		4D7956BC1F13774700247377 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956BB1F13774700247377 /* ViewController.m */; };
+		4D7956BF1F13774700247377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7956BD1F13774700247377 /* Main.storyboard */; };
+		4D7956C11F13774700247377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7956C01F13774700247377 /* Assets.xcassets */; };
+		4D7956C41F13774700247377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7956C21F13774700247377 /* LaunchScreen.storyboard */; };
+		4D7956E21F13776900247377 /* JDBaseRefreshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956D21F13776900247377 /* JDBaseRefreshManager.m */; };
+		4D7956E31F13776900247377 /* JDCollectionViewSimplifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956D61F13776900247377 /* JDCollectionViewSimplifyModel.m */; };
+		4D7956E41F13776900247377 /* JDTableViewSimplifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956D81F13776900247377 /* JDTableViewSimplifyModel.m */; };
+		4D7956E51F13776900247377 /* UICollectionView+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956DB1F13776900247377 /* UICollectionView+simplify.m */; };
+		4D7956E61F13776900247377 /* UICollectionViewCell+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956DD1F13776900247377 /* UICollectionViewCell+simplify.m */; };
+		4D7956E71F13776900247377 /* UITableView+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956DF1F13776900247377 /* UITableView+simplify.m */; };
+		4D7956E81F13776900247377 /* UITableViewCell+simplify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7956E11F13776900247377 /* UITableViewCell+simplify.m */; };
+		C405938C4ABC6210A433616F /* libPods-SMTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D7956B11F13774700247377 /* SMTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7956B51F13774700247377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D7956B71F13774700247377 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D7956B81F13774700247377 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D7956BA1F13774700247377 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D7956BB1F13774700247377 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D7956BE1F13774700247377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D7956C01F13774700247377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D7956C31F13774700247377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D7956C51F13774700247377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7956CD1F13776900247377 /* JDCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCollectionViewDataSource.h; sourceTree = "<group>"; };
+		4D7956CE1F13776900247377 /* JDCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCollectionViewDelegate.h; sourceTree = "<group>"; };
+		4D7956CF1F13776900247377 /* JDTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTableViewDataSource.h; sourceTree = "<group>"; };
+		4D7956D01F13776900247377 /* JDTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTableViewDelegate.h; sourceTree = "<group>"; };
+		4D7956D11F13776900247377 /* JDBaseRefreshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBaseRefreshManager.h; sourceTree = "<group>"; };
+		4D7956D21F13776900247377 /* JDBaseRefreshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBaseRefreshManager.m; sourceTree = "<group>"; };
+		4D7956D31F13776900247377 /* JDBaseScrollViewRefreshDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBaseScrollViewRefreshDelegate.h; sourceTree = "<group>"; };
+		4D7956D51F13776900247377 /* JDCollectionViewSimplifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCollectionViewSimplifyModel.h; sourceTree = "<group>"; };
+		4D7956D61F13776900247377 /* JDCollectionViewSimplifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCollectionViewSimplifyModel.m; sourceTree = "<group>"; };
+		4D7956D71F13776900247377 /* JDTableViewSimplifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTableViewSimplifyModel.h; sourceTree = "<group>"; };
+		4D7956D81F13776900247377 /* JDTableViewSimplifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTableViewSimplifyModel.m; sourceTree = "<group>"; };
+		4D7956DA1F13776900247377 /* UICollectionView+simplify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+simplify.h"; sourceTree = "<group>"; };
+		4D7956DB1F13776900247377 /* UICollectionView+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+simplify.m"; sourceTree = "<group>"; };
+		4D7956DC1F13776900247377 /* UICollectionViewCell+simplify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+simplify.h"; sourceTree = "<group>"; };
+		4D7956DD1F13776900247377 /* UICollectionViewCell+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+simplify.m"; sourceTree = "<group>"; };
+		4D7956DE1F13776900247377 /* UITableView+simplify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+simplify.h"; sourceTree = "<group>"; };
+		4D7956DF1F13776900247377 /* UITableView+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+simplify.m"; sourceTree = "<group>"; };
+		4D7956E01F13776900247377 /* UITableViewCell+simplify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+simplify.h"; sourceTree = "<group>"; };
+		4D7956E11F13776900247377 /* UITableViewCell+simplify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+simplify.m"; sourceTree = "<group>"; };
+		7E193B720BB21BCDB0C9BBC0 /* Pods-SMTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.release.xcconfig"; sourceTree = "<group>"; };
+		A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMTableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9FD39B96A60297D2CBB967 /* Pods-SMTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D7956AE1F13774700247377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C405938C4ABC6210A433616F /* libPods-SMTableView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D7956A81F13774700247377 = {
+			isa = PBXGroup;
+			children = (
+				4D7956CB1F13776900247377 /* SimplifyTableView */,
+				4D7956B31F13774700247377 /* SMTableView */,
+				4D7956B21F13774700247377 /* Products */,
+				C1205E64726751336FF2BDD2 /* Pods */,
+				69C397B78DA572937F0E2A7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D7956B21F13774700247377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956B11F13774700247377 /* SMTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D7956B31F13774700247377 /* SMTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956B71F13774700247377 /* AppDelegate.h */,
+				4D7956B81F13774700247377 /* AppDelegate.m */,
+				4D7956BA1F13774700247377 /* ViewController.h */,
+				4D7956BB1F13774700247377 /* ViewController.m */,
+				4D7956BD1F13774700247377 /* Main.storyboard */,
+				4D7956C01F13774700247377 /* Assets.xcassets */,
+				4D7956C21F13774700247377 /* LaunchScreen.storyboard */,
+				4D7956C51F13774700247377 /* Info.plist */,
+				4D7956B41F13774700247377 /* Supporting Files */,
+			);
+			path = SMTableView;
+			sourceTree = "<group>";
+		};
+		4D7956B41F13774700247377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956B51F13774700247377 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D7956CB1F13776900247377 /* SimplifyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956CC1F13776900247377 /* delegate */,
+				4D7956D11F13776900247377 /* JDBaseRefreshManager.h */,
+				4D7956D21F13776900247377 /* JDBaseRefreshManager.m */,
+				4D7956D31F13776900247377 /* JDBaseScrollViewRefreshDelegate.h */,
+				4D7956D41F13776900247377 /* model */,
+				4D7956D91F13776900247377 /* view */,
+			);
+			path = SimplifyTableView;
+			sourceTree = "<group>";
+		};
+		4D7956CC1F13776900247377 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956CD1F13776900247377 /* JDCollectionViewDataSource.h */,
+				4D7956CE1F13776900247377 /* JDCollectionViewDelegate.h */,
+				4D7956CF1F13776900247377 /* JDTableViewDataSource.h */,
+				4D7956D01F13776900247377 /* JDTableViewDelegate.h */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		4D7956D41F13776900247377 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956D51F13776900247377 /* JDCollectionViewSimplifyModel.h */,
+				4D7956D61F13776900247377 /* JDCollectionViewSimplifyModel.m */,
+				4D7956D71F13776900247377 /* JDTableViewSimplifyModel.h */,
+				4D7956D81F13776900247377 /* JDTableViewSimplifyModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4D7956D91F13776900247377 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4D7956DA1F13776900247377 /* UICollectionView+simplify.h */,
+				4D7956DB1F13776900247377 /* UICollectionView+simplify.m */,
+				4D7956DC1F13776900247377 /* UICollectionViewCell+simplify.h */,
+				4D7956DD1F13776900247377 /* UICollectionViewCell+simplify.m */,
+				4D7956DE1F13776900247377 /* UITableView+simplify.h */,
+				4D7956DF1F13776900247377 /* UITableView+simplify.m */,
+				4D7956E01F13776900247377 /* UITableViewCell+simplify.h */,
+				4D7956E11F13776900247377 /* UITableViewCell+simplify.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		69C397B78DA572937F0E2A7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2F4EB12E53B86A1FADA687E /* libPods-SMTableView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1205E64726751336FF2BDD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FD39B96A60297D2CBB967 /* Pods-SMTableView.debug.xcconfig */,
+				7E193B720BB21BCDB0C9BBC0 /* Pods-SMTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D7956B01F13774700247377 /* SMTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7956C81F13774700247377 /* Build configuration list for PBXNativeTarget "SMTableView" */;
+			buildPhases = (
+				52E28236C3F525FB76BE07C3 /* [CP] Check Pods Manifest.lock */,
+				4D7956AD1F13774700247377 /* Sources */,
+				4D7956AE1F13774700247377 /* Frameworks */,
+				4D7956AF1F13774700247377 /* Resources */,
+				31832371BA199EFA1D01A3BD /* [CP] Embed Pods Frameworks */,
+				03E45EFED3C8CD261B3CC932 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMTableView;
+			productName = SMTableView;
+			productReference = 4D7956B11F13774700247377 /* SMTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D7956A91F13774700247377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "王金东";
+				TargetAttributes = {
+					4D7956B01F13774700247377 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4D7956AC1F13774700247377 /* Build configuration list for PBXProject "SMTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D7956A81F13774700247377;
+			productRefGroup = 4D7956B21F13774700247377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D7956B01F13774700247377 /* SMTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D7956AF1F13774700247377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7956C41F13774700247377 /* LaunchScreen.storyboard in Resources */,
+				4D7956C11F13774700247377 /* Assets.xcassets in Resources */,
+				4D7956BF1F13774700247377 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03E45EFED3C8CD261B3CC932 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31832371BA199EFA1D01A3BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMTableView/Pods-SMTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E28236C3F525FB76BE07C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D7956AD1F13774700247377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7956E41F13776900247377 /* JDTableViewSimplifyModel.m in Sources */,
+				4D7956E21F13776900247377 /* JDBaseRefreshManager.m in Sources */,
+				4D7956E51F13776900247377 /* UICollectionView+simplify.m in Sources */,
+				4D7956E71F13776900247377 /* UITableView+simplify.m in Sources */,
+				4D7956BC1F13774700247377 /* ViewController.m in Sources */,
+				4D7956B91F13774700247377 /* AppDelegate.m in Sources */,
+				4D7956E81F13776900247377 /* UITableViewCell+simplify.m in Sources */,
+				4D7956E31F13776900247377 /* JDCollectionViewSimplifyModel.m in Sources */,
+				4D7956B61F13774700247377 /* main.m in Sources */,
+				4D7956E61F13776900247377 /* UICollectionViewCell+simplify.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D7956BD1F13774700247377 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7956BE1F13774700247377 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D7956C21F13774700247377 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7956C31F13774700247377 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7956C61F13774700247377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D7956C71F13774700247377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D7956C91F13774700247377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9FD39B96A60297D2CBB967 /* Pods-SMTableView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hundsun.SMTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4D7956CA1F13774700247377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E193B720BB21BCDB0C9BBC0 /* Pods-SMTableView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hundsun.SMTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7956AC1F13774700247377 /* Build configuration list for PBXProject "SMTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7956C61F13774700247377 /* Debug */,
+				4D7956C71F13774700247377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7956C81F13774700247377 /* Build configuration list for PBXNativeTarget "SMTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7956C91F13774700247377 /* Debug */,
+				4D7956CA1F13774700247377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D7956A91F13774700247377 /* Project object */;
+}

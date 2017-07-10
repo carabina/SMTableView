@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/HSCY/InternetSaleTicket/!svn/ver/281/trunk/Sources/client/lib/ios/HsCore/HsCore/baseclass/delegate
+END
+HsCollectionViewDataSource.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/HSCY/InternetSaleTicket/!svn/ver/50/trunk/Sources/client/lib/ios/HsCore/HsCore/baseclass/delegate/HsCollectionViewDataSource.h
+END
+HsCollectionViewDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/HSCY/InternetSaleTicket/!svn/ver/281/trunk/Sources/client/lib/ios/HsCore/HsCore/baseclass/delegate/HsCollectionViewDelegate.h
+END
+HsBaseTableViewDataSource.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/HSCY/InternetSaleTicket/!svn/ver/50/trunk/Sources/client/lib/ios/HsCore/HsCore/baseclass/delegate/HsBaseTableViewDataSource.h
+END
+HsBaseTableViewDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/HSCY/InternetSaleTicket/!svn/ver/50/trunk/Sources/client/lib/ios/HsCore/HsCore/baseclass/delegate/HsBaseTableViewDelegate.h
+END
