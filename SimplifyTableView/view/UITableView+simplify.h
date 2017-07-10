@@ -116,7 +116,7 @@ extern NSString *const SMTableViewLayoutForRow;
 
 /**
  *@brief 设置默认三个控件取值的key
- *@brief 设置imageView 取值的key
+ * 设置imageView 取值的key
  * 默认是 image
  **/
 @property (nonatomic,strong) NSString *keyForImageView;

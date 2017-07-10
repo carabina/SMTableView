@@ -66,7 +66,7 @@ typedef void    (^TableViewCellConfigureBlock)(NSIndexPath *indexPath, id dataIn
 
 /**
  *@brief 设置默认三个控件取值的key
- *@brief 设置imageView 取值的key
+ * 设置imageView 取值的key
  **/
 @property (nonatomic, copy) NSString *keyForImageView;
 

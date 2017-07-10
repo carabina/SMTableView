@@ -65,7 +65,7 @@ typedef void(^OnSelectedRowBlock)(NSIndexPath *indexPath,id data,UITableView *ta
 
 /**
  *@brief 设置默认三个控件取值的key
- *@brief 设置imageView 取值的key
+ * 设置imageView 取值的key
  * 默认是 image
  **/
 @property (nonatomic, copy) NSString *keyForImageView;
@@ -89,12 +89,7 @@ typedef void(^OnSelectedRowBlock)(NSIndexPath *indexPath,id data,UITableView *ta
  *  @brief  计算行高 如果你的tableview设置了autoLayout=YES 并且cell是约束布局,则cell的高度不需要你来计算
  *          如果cell是frame布局则需要重写 - (CGSize)sizeThatFits:(CGSize)size 并设置cell的enforceFrameLayout=YES
  *
- *  @param tableView tableview
- *  @param dataInfo
  *
- *  @return
- *
- *  @since
  */
 @property (nonatomic, assign) BOOL enforceFrameLayout;
 
