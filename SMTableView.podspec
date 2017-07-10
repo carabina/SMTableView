@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SMTableView"
-  s.version      = "2.1.2"
+  s.version      = "2.1.3"
   s.summary      = "one line of tableview"
 
   s.description  = <<-DESC
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SimplifyTableView/**/*"
+  s.source_files  = "SimplifyTableView/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
